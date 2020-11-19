@@ -1,0 +1,35 @@
+<div class="user-img-wrapper">
+    <img src="https://uifaces.co/our-content/donated/3799Ffxy.jpeg" alt="img">
+</div>
+<ul class="sidebar-nav-wrapper">
+    <li>
+        <a>
+            <i class="fa fa-file-o" aria-hidden="true"></i>
+        </a>
+    </li>
+    <li routerLink="calendar" routerLinkActive="is-active" [routerLinkActiveOptions]="{exact: true}">
+        <a>
+            <i class="fa fa-calendar" aria-hidden="true"></i>
+        </a>
+    </li>
+    <li routerLink="chat" routerLinkActive="is-active" [routerLinkActiveOptions]="{exact: true}">
+        <a>
+            <i class="fa fa-comment-o" aria-hidden="true"></i>
+        </a>
+    </li>
+    <li routerLink="notifications" [routerLinkActive]="['is-active']">
+        <a>
+            <i class="fa fa-bell-o" aria-hidden="true"></i>
+        </a>
+    </li>
+    <li>
+        <a>
+            <i class="fa fa-users" aria-hidden="true"></i>
+        </a>
+    </li>
+    <li>
+        <a>
+            <i class="fa fa-cog" aria-hidden="true"></i>
+        </a>
+    </li>
+</ul>

@@ -1,0 +1,144 @@
+<div class="row">
+    <div class="col-md-12">
+        <div class="chat-main-wrapper">
+            <div class="row">
+                <div class="col-md-3">
+                    <div class="chat-left-navigation-wrapper">
+                        <div class="chat-navigation-section">
+                            <div class="chat-navigation-top-wrapper prev-class">
+                                <br>
+                                <div class="chat-search-field">
+                                    <div class="form-group">
+                                        <i class="fa fa-search" aria-hidden="true"></i>
+                                        <input type="text" placeholder="Search..." class="form-control" id="search" aria-describedby="searchField">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="chat-tab-wrapper">
+                                <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+                                    <a *ngFor="let item of items; let i = index; let first = first;" attr.data-index="{{i}}" (click)="selectPill(i, $event)" class="nav-link fade show" [ngClass]="{'active': i === activePillIndex, 'next-default' : (activateClass && i === 1)}" id="v-pills-{{i}}"
+                                        data-toggle="pill" role="tab" aria-controls="v-pills-tabs" aria-selected="true">
+                                        <div class="chat-thread-wrap">
+                                            <div class="chat-user-img">
+                                                <img src="{{item.img}}" alt="Chat-image">
+                                            </div>
+                                            <div class="chat-user-name">
+                                                <h5>{{item.name}}</h5>
+                                                <p>{{item.time}}</p>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-9">
+                    <div class="tab-content" id="v-pills-tabContent">
+                        <div *ngFor="let item of items; let i = index; let first = first;" class="tab-pane fade show" [ngClass]="{'active': i === activePillIndex}" id="v-pills-{{i}}" role="tabpanel" aria-labelledby="v-pills-home-tab">
+                            <div class="chat-body-wrapper">
+                                <div class="chat-header-section">
+                                    <div class="chat-thread-wrap">
+                                        <div class="chat-user-img">
+                                            <img src="{{item.img}}" alt="Chat-image">
+                                        </div>
+                                        <div class="chat-user-name">
+                                            <h5>{{item.name}}</h5>
+                                            <p>Online</p>
+                                        </div>
+                                        <ul class="chat-medium-wrapper">
+                                            <li>
+                                                <div class="more-option-icon">
+                                                    <i class="fa fa-video-camera" aria-hidden="true"></i>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="more-option-icon">
+                                                    <i class="fa fa-phone" aria-hidden="true"></i>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="chat-thread-wrapper">
+                                    <ul>
+                                        <li>
+                                            <div class="conversation">
+                                                <div class="conversation-text">
+                                                    <p>Hello, Good Morning..!</p>
+                                                    <p>How is marketing going for brand?</p>
+                                                </div>
+                                                <div class="chat-img">
+                                                    <img src="https://uifaces.co/our-content/donated/N5PLzyan.jpg" alt="Chat-image">
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li class="chat-app-user">
+                                            <div class="conversation">
+                                                <div class="conversation-text user">
+                                                    <p>Hello, Good Morning..!</p>
+                                                    <p>How is marketing going for brand?</p>
+                                                </div>
+                                            </div>
+                                            <div class="conversation">
+                                                <div class="chat-img">
+                                                    <img src="{{item.img}}" alt="Chat-image">
+                                                </div>
+                                                <div class="conversation-text user">
+                                                    <p>{{item.name}} shared 3 docs!!</p>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="conversation">
+                                                <div class="conversation-text">
+                                                    <p>This looks great. Thank you!</p>
+                                                </div>
+                                                <div class="chat-img">
+                                                    <img src="https://uifaces.co/our-content/donated/N5PLzyan.jpg" alt="Chat-image">
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li class="chat-app-user">
+                                            <div class="conversation">
+                                                <div class="conversation-text user">
+                                                    <p>Hello, Good Morning..!</p>
+                                                </div>
+                                            </div>
+                                            <div class="conversation">
+                                                <div class="chat-img">
+                                                    <img src="{{item.img}}" alt="Chat-image">
+                                                </div>
+                                                <div class="conversation-text user">
+                                                    <p>{{item.name}} shared 3 docs!!</p>
+                                                </div>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="chat-input-wrapper">
+                                    <div class="form-group">
+                                        <div class="icon-bg emoji">
+                                            <i class="fa fa-smile-o" aria-hidden="true"></i>
+                                        </div>
+                                        <input type="text" placeholder="Type a message here..." class="form-control" id="search" aria-describedby="searchField">
+                                        <div class="attachment-icon">
+                                            <i class="fa fa-paperclip" aria-hidden="true"></i>
+                                        </div>
+                                        <div class="icon-bg send">
+                                            <i class="fa fa-paper-plane" aria-hidden="true"></i>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
