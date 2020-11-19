@@ -17,6 +17,7 @@ import { ChatComponent } from './chat/chat/chat.component';
 import { SidebarNavComponent } from './chat/sidebar-nav/sidebar-nav.component';
 import { ChatMainComponent } from './chat/chat-main/chat-main.component';
 import { HomeComponent } from './home/home/home.component';
+import { HashLocationStrategy, LocationStrategy } from '@angular/common';
 
 @NgModule({
   declarations: [
@@ -38,7 +39,7 @@ import { HomeComponent } from './home/home/home.component';
     AngularFireAuthModule,
     AngularFirestoreModule,
   ],
-  providers: [AuthService],
+  providers: [AuthService, {provide: LocationStrategy, useClass: HashLocationStrategy}],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
